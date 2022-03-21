@@ -1,7 +1,7 @@
 // This is a JavaScript code for Rock,Paper and Scissor game !
 
 function computerPlay(){ // This function generates random computer action for the game
-    let arr = ['ROCK','PAPER','SCISSORS']
+    let arr = ['ROCK','PAPER','SCISSORS'];
     let returnedArr = arr[Math.floor(Math.random() * arr.length)];
     return returnedArr;
 }
@@ -23,8 +23,11 @@ function playRound(playerSelection,computerSelection){
     }
     else if(playerSelection === ("ROCK"||"rock"||"Rock") && computerSelection === ("PAPER"||"paper"||"Paper")){
     console.log('You loose! Paper beats Rock');
+    // else condition
+    }else{
+        console.log('Tie Breaker!');
     }
 }
 const playerSelection = "rock";
 const computerSelection = computerPlay();
-console.log(playRound());
+console.log(playRound(playerSelection,computerSelection));
